@@ -1,0 +1,47 @@
+<div class="main-container">
+    <div class="nav-container index-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container ">
+                <%= link_to groups_path, class: "text-white ml-3" do %>
+                    <i class="fas fa-arrow-left text-white" style="margin-left: 5px;"></i>
+                <% end %>
+                <a class="navbar-brand text-white" href="#">Transactions</a>
+                <div>
+                  <i class='bi bi-search text-white'></i>
+                </div>
+            </div>
+        </nav>
+        <div class="shadow mb-3 bg-body-tertiary rounded groups-elements">
+            <div><%= image_tag(@group.icon, class: "icon img-fluid") %></div>
+            <div class="group-item"><%= @group.name %></div>
+            <div class="group-item"><%= @group.entities.sum(:amount) %></div>
+        </div>
+
+                <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @group.entities.each do |entity| %>
+                        <tr>
+                            <td><%= entity.name %></td>
+                            <td><%= entity.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                            <td><%= entity.amount %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="text-center text-lg-start bg-none">
+            <div class="text-center p-3">
+                <%= link_to 'New Transaction', new_group_entity_path(@group), class: "btn btn-outline-light" %>
+            </div>
+        </footer>
+    </div>
+</div>

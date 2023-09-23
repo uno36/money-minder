@@ -3,6 +3,8 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Budget Buddy ](#-budget-buddy-)
   - [🛠 Built With ](#-built-with-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [🔭 Video Presentation ](#-video-presentation-)
   - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
@@ -29,6 +31,16 @@
 - JavaScript
 - HTML 
 - CSS
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Video Presentation <a name="video"></a>
+
+- [Video Presentation](https://www.loom.com/share/cccc490f533d423db04bad56830e72c7?sid=aed07c54-a87e-4e78-bce1-54391461d6ca)
 
 ## Tech Stack <a name="tech-stack"></a>
 

@@ -1,0 +1,32 @@
+<div class="main-container">
+  <div class="nav-container">
+    <%= form_with(model: [@group, @entity], html: { class: "form" }) do |f| %>
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          
+          <div class='text-align-center'>
+            <span class="navbar-brand text-white ">Create New Transaction</span>
+          </div>
+          <button type="submit" class="btn btn-success ml-auto ">Make Transaction</button>
+        </div>
+      </nav>
+      <div class="form-field container mt-4">
+        <div class="form-group">
+          <%= f.label :name, class: "form-label" %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "Transaction Name" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :amount, class: "form-label" %>
+          <%= f.text_field :amount, autofocus: true, autocomplete: "name", placeholder: "Enter Amount", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :group_id, "Select Category:", class: "form-label" %>
+          <%= f.select :group_id, @groups.collect { |u| [u.name.capitalize, u.id] }, {}, class: 'form-control' %>
+        </div>
+        <%= link_to 'back', group_path(@group), class: "btn btn-success"  %>            
+      </div>
+    <% end %>
+  </div>
+</div>

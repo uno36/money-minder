@@ -30,3 +30,276 @@
     transform: translateY(0);
   }
 }
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    margin-right: -35px;
+  }
+
+  .log-out-btn {
+    font-size: 12px;
+  }
+
+  .fa-arrow-left {
+    margin-left: -20px;
+  }
+
+  .index-container {
+    border: 2px solid rgb(185, 185, 185);
+    position: relative;
+  }
+
+  .text-lg-start {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(36, 164, 55, 0.943);
+  }
+
+  .groups-elements {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 4rem;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .icon {
+    width: 45px;
+  }
+
+  .group-item {
+    color: rgb(105, 103, 103);
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .index-container {
+    height: 93vh;
+    border: 2px solid rgb(185, 185, 185);
+    position: relative;
+  }
+
+  .text-lg-start {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(36, 164, 55, 0.943);
+  }
+
+  .groups-elements {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 4rem;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rood-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    width: 50%;
+    align-self: center;
+    height: 80vh;
+    border-radius: 8px;
+  }
+
+  .img-container {
+    width: 60%;
+    height: 60%;
+    align-self: center;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-container {
+    width: 50%;
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 786px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rood-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    height: 80vh;
+    border-radius: 8px;
+  }
+
+  .img-container {
+    width: 95%;
+    height: 65%;
+    align-self: center;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-container {
+    width: 90%;
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 92vh;
+  }
+
+  .submit-btn {
+    background-color: transparent;
+    border: none;
+    color: #ece8e8;
+  }
+
+  .navbar {
+    background-color: rgba(45, 84, 152, 0.895);
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-field {
+    margin-top: 30px;
+  }
+
+  .render {
+    align-self: center;
+  }
+
+  .forgot-pass {
+    color: rgb(69, 69, 69);
+  }
+
+  .navbar-brand {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .submit-btn {
+    background-color: transparent;
+    border: none;
+    color: #ece8e8;
+  }
+
+  .navbar {
+    background-color: rgba(45, 84, 152, 0.895);
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-field {
+    margin-top: 20px;
+  }
+
+  .render {
+    align-self: center;
+  }
+
+  .forgot-pass {
+    color: rgb(69, 69, 69);
+  }
+
+  .navbar-brand {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.timestamp {
+  font-size: 10px;
+}
+
+.icon-options {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.icon-image {
+  width: 45px;
+}
+
+.selection {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-color: #007bff;
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
