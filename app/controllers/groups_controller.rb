@@ -22,12 +22,12 @@ class GroupsController < ApplicationController
     @group = current_user.groups.find(params[:id])
     @entities = @group.entities
   end
-  
+
   def delete_category
     @group = Group.find(params[:id])
     @group.group_entities.destroy_all # Manually delete associated records
     @group.destroy
-    redirect_to groups_path, notice: "Category and associated records deleted successfully."
+    redirect_to groups_path, notice: 'Category and associated records deleted successfully.'
   end
 
   private

@@ -7,5 +7,4 @@ class User < ApplicationRecord
   has_many :groups
 
   validates :fullname, presence: true
-  
 end
