@@ -21,7 +21,15 @@
       <tbody>
         <% @groups.each do |group| %>
           <tr>
-            <td><%= image_tag group.icon, class: "img-fluid icon-size-50" %></td>
+            <td>
+              <% if group.icon.present? %>
+                <%= image_tag group.icon, class: "img-fluid icon-size-50" %>
+              <% else %>
+                <%= image_tag 'users_image.png', class: "img-fluid icon-size-50" %>                
+              <% end %>
+              
+            </td>
+
             <td><%= link_to group.name, group_path(group) %></td> 
             <td><%= group.entities.sum(:amount) %></td>
             <td>
