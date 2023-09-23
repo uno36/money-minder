@@ -5,4 +5,11 @@ Rails.application.routes.draw do
   }
 
   root 'splash#index'
+
+  resources :groups, only: [:index, :show, :new, :create] do
+    member do
+      delete 'delete_category'
+    end
+    resources :entities, only: [:new, :create]
+  end
 end
