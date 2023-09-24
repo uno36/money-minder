@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'splash#index'
+
+  resources :groups, only: [:index, :show, :new, :create] do
+    member do
+      delete 'delete_category'
+    end
+    resources :entities, only: [:new, :create]
+  end
 end
