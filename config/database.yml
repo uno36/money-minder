@@ -24,8 +24,7 @@ default: &default
 development:
   <<: *default
   database: money_minder_development
-  username: postgres
-  password: uno36@postgres
+  url: <%= ENV['DATABASE_URL'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
